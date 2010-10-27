@@ -1,0 +1,9 @@
+application: danilogaemc
+version: events
+runtime: python
+api_version: 1
+
+handlers:
+- url: /event.*
+  script: events.py
+  
