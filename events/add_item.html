@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Add item to event {{event_name}}</h1>
+<form action="/event/{{event_name}}/add_item" method="post">
+<label for="name">name:</label>
+<input type="text" name="name" /><br />
+<label for="locale">importance:</label>
+<select name="importance">
+  <option value="not important">Not Important</option>
+  <option value="medium">Medium</option>
+  <option value="indispensable">Indispensable</option>
+</select><br/>
+<label for="sponsor">Responsible:</label>
+<input type="text" name="sponsor"/><br />
+<input type="submit" value="add" />
+</form>
+{% endblock %}

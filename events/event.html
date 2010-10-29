@@ -1,0 +1,24 @@
+{% block body %}
+<p align="right"><a href="/">home</a></p>
+
+<h1>{{event.name}}</h1>
+<h2>{{event.locale}}</h2>
+<h2>{{event.date}}</h2>
+<h2>Participants</h2>
+
+{% for participant in event.participants %}
+
+	<p>{{participant.nickname}}</p>
+	
+{% endfor %}
+<p><a href="/event/{{event.name}}/presence">toggle presence</a></p>
+
+<h2>Itens</h2>
+{% for item in event.itens %}
+
+	<p>{{item.name}} | {{item.importance}} | {{item.sponsor}}</p>
+
+{% endfor %}
+<p><a href="/event/{{event.name}}/add_item">add item</a></p>
+
+{% endblock %}

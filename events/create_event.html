@@ -1,13 +1,14 @@
-{% extends "layout.tpl" %}
+{% extends "layout.html" %}
 
 {% block body %}
-<form action="/projects/create" method="post">
+<h1>Create new event</h1>
+<form action="/event/create" method="post">
 <label for="name">name:</label>
 <input type="text" name="name" /><br />
-<label for="keywords">keywords:</label>
-<input type="text" name="keywords" /><br />
-<label for="description">description:</label>
-<textarea name="description"></textarea>
+<label for="locale">locale:</label>
+<input type="text" name="locale" /><br />
+<label for="date">date [format: 'd/m/y h:m']:</label>
+<input type="text" name="date" value='31/12/10 23:59' /><br />
 <input type="submit" value="create" />
 </form>
 {% endblock %}

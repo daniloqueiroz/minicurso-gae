@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<p align="right"><a href="/event/create">add a new event</a></p>
+<h1>Next Events</h1>
+
+{% if events %}
+	{% for event in events %}
+	
+		<p><a href="/event/{{event.name}}">{{event.name}}</a> | {{event.locale}} | {{event.date}} </p>
+		
+	{% endfor %}
+{% else %}
+
+	<h2>No next events</h2>
+	
+{% endif %}
+<br/>
+
+{% if old %}
+
+	<p><a href="/">Show next events</p>
+	
+{% else %}
+
+	<p><a href="/?old=True">Show past events</p>
+	
+{% endif %}
+{% endblock %}
