@@ -1,5 +1,5 @@
 application: hellodpq
-version: events
+version: user
 runtime: python
 api_version: 1
 
