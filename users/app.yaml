@@ -1,0 +1,15 @@
+application: hellodpq
+version: users
+runtime: python
+api_version: 1
+
+handlers:
+- url: /a/.*
+  script: restricted.py
+  login: required
+  
+- url: /.*
+  script: open.py
+
+  
+  
