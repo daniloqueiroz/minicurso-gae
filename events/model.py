@@ -3,9 +3,6 @@ from google.appengine.ext import db
 from google.appengine.api import users
 from google.appengine.api.users import User
 
-from datetime import datetime
-
-
 # Classes
 class Event(db.Model):
     name = db.StringProperty(required=True)
@@ -14,13 +11,20 @@ class Event(db.Model):
     date = db.DateTimeProperty(required=True)
     participants = db.ListProperty(User)
 
+
+
 class Item(db.Model):
     event = db.ReferenceProperty(Event, collection_name='itens')
     name = db.StringProperty(required=True)
     importance = db.StringProperty(required=True, choices=set(["not important", "medium", "indispensable"]), default="not important")
     sponsor = db.StringProperty(required=True)
 
+
+
+
 # business logic    
+from datetime import datetime
+
 def create_new_event(ev_name, ev_locale, ev_date):
     ev_host = users.get_current_user()
     event = Event(name=ev_name, locale=ev_locale, host=ev_host, date=ev_date)
