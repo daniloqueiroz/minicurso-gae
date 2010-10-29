@@ -5,6 +5,6 @@ Este projeto contém o material usado no minicurso de desenvolvimento python par
 
 Links
 -----
-	* [JATIC](http://lti.cesed.br/jatic/)
-	* [AppStatus application](https://github.com/Octahedron/appstatus)
-	* [AppEngine](https://code.google.com/appengine/)
+  * [JATIC](http://lti.cesed.br/jatic/)
+  * [AppStatus application](https://github.com/Octahedron/appstatus)
+  * [AppEngine](https://code.google.com/appengine/)

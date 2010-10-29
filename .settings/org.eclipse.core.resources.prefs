@@ -1,5 +1,5 @@
-#Thu Oct 28 23:39:03 BRT 2010
+#Fri Oct 29 00:00:32 BRT 2010
 eclipse.preferences.version=1
 encoding//events/model.py=utf-8
-encoding//user/open.py=utf-8
-encoding//user/restricted.py=utf-8
+encoding//users/open.py=utf-8
+encoding//users/restricted.py=utf-8
